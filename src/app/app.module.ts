@@ -14,12 +14,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { BookListComponent } from './book-list/book-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BookCardComponent,
     DialogComponent,
+    BookListComponent,
   ],
   imports: [
     BrowserModule,
