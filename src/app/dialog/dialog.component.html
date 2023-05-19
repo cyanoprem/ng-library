@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <p>Enter book Title</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Book Name</mat-label>
+    <input matInput [(ngModel)]="data.bookTitle">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.bookTitle" cdkFocusInitial>Ok</button>
+</div>
