@@ -26,4 +26,9 @@ export class BookListComponent {
       this.bookTitleArray.push(result);      
     });
   }
+
+  deleteBook(index: number) {
+    this.bookTitleArray.splice(index, 1);
+  }
+
 }
