@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Book } from '../shared/book';
 
 @Component({
   selector: 'app-book-card',
@@ -7,7 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class BookCardComponent {
   
-  @Input() bookTitle: string = ''
+  @Input() book: Book = {
+    bookTitle: '',
+    bookAuthor: '',
+    noOfPages: 0,
+    haveRead: false
+  }
   @Input() index: number = 0
   @Output() deletingBook = new EventEmitter<number>()
 

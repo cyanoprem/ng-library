@@ -1,3 +1,8 @@
 .ml-2 {
   margin-left: 0.5rem;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}

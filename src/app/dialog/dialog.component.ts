@@ -2,10 +2,8 @@ import { Component, Inject } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { BookListComponent } from '../book-list/book-list.component';
+import { Book } from '../shared/book';
 
-export interface DialogData {
-  bookTitle: string;
-}
 
 @Component({
   selector: 'app-dialog',
@@ -15,7 +13,7 @@ export interface DialogData {
 export class DialogComponent {
   constructor(
     public dialogRef: MatDialogRef<BookListComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(MAT_DIALOG_DATA) public data: Book,
   ) {}
 
   onNoClick(): void {

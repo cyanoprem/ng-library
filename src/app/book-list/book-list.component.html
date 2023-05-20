@@ -1,2 +1,4 @@
-<button class='ml-2' mat-raised-button color="primary" mat-raised-button (click)="openDialog()">New Book</button>
-<div *ngFor="let book of bookTitleArray; index as i"><app-book-card [bookTitle]="book" [index]="i" (deletingBook)="deleteBook($event)"></app-book-card></div>
+<div class="button-container">
+  <button class='ml-2' mat-raised-button color="primary" mat-raised-button (click)="openDialog()">New Book</button>
+</div>
+<div *ngFor="let book of booksArray; index as i"><app-book-card [book]="book" [index]="i" (deletingBook)="deleteBook($event)"></app-book-card></div>

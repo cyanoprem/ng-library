@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
-
-export interface DialogData {
-  bookTitle: string;
-}
+import { Book } from '../shared/book';
 
 
 @Component({
@@ -13,22 +10,22 @@ export interface DialogData {
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent {
-  bookTitleArray: string[] = [];
+  booksArray: Book[] = [];
 
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
-      data: {bookTitle: ''},
+      data: {booksArray: []},
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.bookTitleArray.push(result);      
+      this.booksArray.push(result);      
     });
   }
 
   deleteBook(index: number) {
-    this.bookTitleArray.splice(index, 1);
+    this.booksArray.splice(index, 1);
   }
 
 }

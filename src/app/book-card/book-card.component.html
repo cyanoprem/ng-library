@@ -1,12 +1,12 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title>{{ bookTitle }}</mat-card-title>
-    <!-- <mat-card-subtitle>by {{ author }}</mat-card-subtitle> -->
+    <mat-card-title>{{ book.bookTitle }}</mat-card-title>
+    <mat-card-subtitle>by {{ book.bookAuthor }}</mat-card-subtitle>
   </mat-card-header>
-  <!-- <mat-card-content>
-    <p>No of Pages: {{ noOfPages }}</p>
-    <p>Read: Yes</p>
-  </mat-card-content> -->
+  <mat-card-content>
+    <p>No of Pages: {{ book.noOfPages }}</p>
+    <p>Read: {{ book.haveRead }}</p>
+  </mat-card-content>
   <mat-card-actions>
     <button class='delete-button' mat-raised-button color="accent" (click)="deleteBook(index)">Delete</button>
   </mat-card-actions>

@@ -1,11 +1,23 @@
 <div mat-dialog-content>
-  <p>Enter book Title</p>
+  <p>Enter Book Details</p>
   <mat-form-field appearance="fill">
     <mat-label>Book Name</mat-label>
-    <input matInput [(ngModel)]="data.bookTitle">
+    <input matInput [(ngModel)]="data.bookTitle" name="bookTitle">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Author</mat-label>
+    <input matInput [(ngModel)]="data.bookAuthor" name="bookAuthor">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>No of Pages</mat-label>
+    <input matInput [(ngModel)]="data.noOfPages" name="noOfPages">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Have you read the book? (Yes/No)</mat-label>
+    <input matInput [(ngModel)]="data.haveRead" name="haveRead">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.bookTitle" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
 </div>
